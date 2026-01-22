@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Goutam Choudhary | Frontend Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#f4f6fb;
+    color:#1f2937;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    z-index:100;
+}
+nav h2{font-size:22px;}
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+}
+.menu-btn{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:100vh;
+    background:linear-gradient(to right,#1e3a8a,#0f172a);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:60px;
+}
+.hero h1{color:#fff;font-size:38px;}
+.hero span{color:#38bdf8;}
+.hero p{color:#cbd5f5;margin:10px 0;}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+.bg{background:#fff;}
+h2{text-align:center;margin-bottom:30px;}
+
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    font-size:17px;
+}
+
+/* ================= SKILLS ================= */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
+}
+.skill{
+    background:#0f172a;
+    color:#fff;
+    padding:12px;
+    text-align:center;
+    border-radius:6px;
+}
+
+/* ================= BOX ================= */
+.box{
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ================= PROJECTS ================= */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+.project-links{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}
+.project-links a{
+    flex:1;
+    text-align:center;
+    padding:8px 10px;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+.live{
+    background:#2563eb;
+    color:#fff;
+}
+.github{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* ================= CONTACT ================= */
+.contact{text-align:center;font-size:16px;}
+.contact a{color:#2563eb;text-decoration:none;}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    nav{padding:15px 20px;}
+    .menu-btn{display:block;}
+    nav ul{
+        position:absolute;
+        top:60px;
+        left:0;
+        width:100%;
+        background:#0f172a;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        padding:15px 0;
+    }
+    nav ul.active{display:flex;}
+    .hero{height:auto;padding:120px 20px 80px;}
+    .hero h1{font-size:26px;}
+    .projects{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Goutam</h2>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <div>
+        <h1>Hi, I'm <span>Goutam Choudhary</span></h1>
+        <p>Frontend Developer | HTML • CSS • JavaScript • Bootstrap</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p class="about">
+        Frontend Developer skilled in HTML, CSS, JavaScript and Bootstrap.
+        Focused on responsive design, clean UI and performance.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="bg">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Bootstrap</div>
+         <div class="skill">C</div>
+          <div class="skill">C++</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="bg">
+    <h2>Projects</h2>
+    <div class="projects">
+
+        <div class="box">
+            <h4>Education Website</h4>
+            <p> responsive education website.</p>
+            <div class="project-links">
+                <a href="https://aqe8bc1whfwa.swipepages.page/conflunence2026-page" target="_blank" class="live">Live</a>
+                <a href="https://github.com/yourgithub/education-site" target="_blank" class="github">GitHub</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h4>Business Website</h4>
+            <p>Modern business landing page.</p>
+            <div class="project-links">
+                <a href="https://goutamchoudhary89264-eng.github.io/iphone" target="_blank" class="live">Live</a>
+                <a href="https://github.com/yourgithub/business-site" target="_blank" class="github">GitHub</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h4>Personal Portfolio</h4>
+            <p>Clean portfolio showcasing skills.</p>
+            <div class="project-links">
+                <a href="#" class="live">Live</a>
+                <a href="https://github.com/yourgithub/portfolio" target="_blank" class="github">GitHub</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+        <p>Email: goutamchoudhary89264@gmail.com</p>
+        <p>Mobile: 7725031404</p>
+        <p>
+            <a href="https://linkedin.com/in/goutam-choudhary-a39354360" target="_blank">
+                LinkedIn Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Goutam Choudhary</p>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
